@@ -258,3 +258,45 @@ footer {
     .main-title p { font-size: 1rem; }
     .tabs { flex-wrap: wrap; }
 }
+
+/* --- [前面的所有样式保持不变] --- */
+:root {
+    --primary-color: #1a73e8;
+    --primary-dark: #0d47a1;
+    --primary-light: #e8f0fe;
+    --background: linear-gradient(135deg, #1a2980, #26d0ce);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --text-color: #202124;
+    --text-light: #5f6368;
+    --border-color: #e0e0e0;
+    --success-color: #4caf50;
+    --danger-color: #f44336;
+    --warning-color: #ff9800;
+}
+/* ... [省略之前已有的所有 CSS] ... */
+
+/* --- Tab 2: 服务监控 (UptimeRobot 部分) --- */
+/* ... [省略之前已有的监控 CSS] ... */
+.chart-container { background: var(--card-bg); border-radius: 16px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); padding: 25px; }
+.chart-wrapper { height: 300px; position: relative; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 25px; display: flex; align-items: center; gap: 12px; color: var(--primary-dark); }
+
+
+/* --- Tab 2: 服务监控 - NAS 部分 --- */
+.nas-section { margin-bottom: 40px; }
+.nas-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px; }
+.nas-info-card { background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 6px 20px rgba(0,0,0,0.07); display: flex; align-items: center; gap: 20px; }
+.nas-info-icon { font-size: 28px; color: var(--primary-dark); width: 50px; text-align: center; }
+.nas-info-details { flex-grow: 1; }
+.nas-info-label { font-size: 16px; color: #666; }
+.nas-info-value { font-size: 20px; font-weight: 600; }
+.nas-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 25px; }
+.nas-chart-wrapper { height: 250px; position: relative; }
+.progress-bar-container { margin-bottom: 10px; }
+.progress-bar-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; }
+.progress-bar-label { font-weight: 500; }
+.progress-bar-bg { background: #e9ecef; border-radius: 5px; height: 10px; overflow: hidden; }
+.progress-bar-fill { background: linear-gradient(90deg, #1e88e5, #42a5f5); height: 100%; width: 0%; transition: width 0.5s ease-out; border-radius: 5px; }
+
+/* ... [页脚和响应式设计部分保持不变] ... */
+@media (max-width: 768px) { .nas-info-grid { grid-template-columns: 1fr; } }

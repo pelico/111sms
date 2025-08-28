@@ -93,6 +93,19 @@
         <div class="tab-content" id="tab-monitoring">
             <!-- 服务监控内容 (来自 index(2).html) -->
             <div id="monitoring-container">
+                 <!-- === 新增 NAS 模块的 HTML 骨架 === -->
+                <div class="nas-section" id="nas-section-container" style="display: none;">
+                    <h2 class="section-title"><i class="fas fa-server"></i><span>NAS 系统状态</span></h2>
+                    <div class="nas-info-grid">
+                        <div class="nas-info-card"><i class="fas fa-power-off nas-info-icon"></i><div class="nas-info-details"><div class="nas-info-label">启动于</div><div id="nas-boot-time" class="nas-info-value">...</div></div></div>
+                        <div class="nas-info-card"><i class="fas fa-history nas-info-icon"></i><div class="nas-info-details"><div class="nas-info-label">已运行</div><div id="nas-uptime" class="nas-info-value">...</div></div></div>
+                    </div>
+                    <div class="nas-stats-grid" id="nas-realtime-stats"></div>
+                    <div class="charts-grid">
+                        <div class="chart-container"><div class="chart-header"><h3 class="chart-title">CPU 使用率 (近7日)</h3></div><div class="nas-chart-wrapper"><canvas id="nasCpuHistoryChart"></canvas></div></div>
+                        <div class="chart-container"><div class="chart-header"><h3 class="chart-title">网络流量增长 (近7日)</h3></div><div class="nas-chart-wrapper"><canvas id="nasNetworkHistoryChart"></canvas></div></div>
+                    </div>
+                </div>
                 <!-- JS将在这里动态生成内容 -->
                 <div class="loading-state"><div class="loading-spinner"></div><p>正在加载服务监控数据...</p></div>
             </div>
